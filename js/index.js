@@ -73,7 +73,7 @@ $(function () {
     } else {
         $.ajax({
             type: 'GET',
-            url: 'https://www.arthurdon.top:3000/top/list?idx=1',
+            url: 'http://www.arthurdon.top:3000/top/list?idx=1',
             success: function (data) {
                 console.log(data);
                 localStorage.setItem('songs', JSON.stringify(data));
@@ -191,7 +191,7 @@ $(function () {
             var $nextLi = $('.list-music>li').eq(index);
             console.log($nextLi);
             var id = $nextLi.data('id');
-            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
             $('audio').attr('name', id);
             $nextLi.addClass('activeLi');
             $nextLi.find('i').css({
@@ -401,7 +401,7 @@ $(function () {
             }
         } else {
             $(audio).attr('name', id);
-            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
         }
     })
 
@@ -458,7 +458,7 @@ $(function () {
         $('.songName>span').text($newSong.find('span').eq(1).text());
         $('.headPhoto>img')[0].src = $newSong.data('img');
 
-        audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
+        audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
         $('audio').attr('name', id);
         if ($newSong.siblings().hasClass('activeLi')) {
             $newSong.siblings().removeClass('activeLi').attr('name', 0);
@@ -487,7 +487,7 @@ $(function () {
         if (select.length != 0) {
             $.ajax({
                 type: 'GET',
-                url: 'https://www.arthurdon.top:3000/lyric?id=' + id,
+                url: 'http://www.arthurdon.top:3000/lyric?id=' + id,
                 success: function (data) {
                     console.log(111);
                     //移除歌词
@@ -593,7 +593,7 @@ $(function () {
             $('.songName>span').text($newSong.find('span').eq(1).text());
             $('.headPhoto>img')[0].src = $newSong.data('img');
 
-            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
             $('audio').attr('name', id);
 
             $newSong.addClass('activeLi');
@@ -651,7 +651,7 @@ $(function () {
         if ($activeLi.length != 0) {
             $.ajax({
                 type: 'GET',
-                url: 'https://www.arthurdon.top:3000/lyric?id=' + id,
+                url: 'http://www.arthurdon.top:3000/lyric?id=' + id,
                 success: function (data) {
 
                     //移除歌词
