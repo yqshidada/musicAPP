@@ -487,7 +487,7 @@ $(function () {
         if (select.length != 0) {
             $.ajax({
                 type: 'GET',
-                url: 'http://www.arthurdon.top:3000/lyric?id=' + id,
+                url: 'https://www.arthurdon.top:3000/lyric?id=' + id,
                 success: function (data) {
                     console.log(111);
                     //移除歌词
@@ -651,7 +651,7 @@ $(function () {
         if ($activeLi.length != 0) {
             $.ajax({
                 type: 'GET',
-                url: 'http://www.arthurdon.top:3000/lyric?id=' + id,
+                url: 'https://www.arthurdon.top:3000/lyric?id=' + id,
                 success: function (data) {
 
                     //移除歌词
