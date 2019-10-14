@@ -191,7 +191,7 @@ $(function () {
             var $nextLi = $('.list-music>li').eq(index);
             console.log($nextLi);
             var id = $nextLi.data('id');
-            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
             $('audio').attr('name', id);
             $nextLi.addClass('activeLi');
             $nextLi.find('i').css({
@@ -401,7 +401,7 @@ $(function () {
             }
         } else {
             $(audio).attr('name', id);
-            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
         }
     })
 
@@ -458,7 +458,7 @@ $(function () {
         $('.songName>span').text($newSong.find('span').eq(1).text());
         $('.headPhoto>img')[0].src = $newSong.data('img');
 
-        audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
+        audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
         $('audio').attr('name', id);
         if ($newSong.siblings().hasClass('activeLi')) {
             $newSong.siblings().removeClass('activeLi').attr('name', 0);
@@ -593,7 +593,7 @@ $(function () {
             $('.songName>span').text($newSong.find('span').eq(1).text());
             $('.headPhoto>img')[0].src = $newSong.data('img');
 
-            audio.src = 'http://music.163.com/song/media/outer/url?id=' + id;
+            audio.src = 'https://music.163.com/song/media/outer/url?id=' + id;
             $('audio').attr('name', id);
 
             $newSong.addClass('activeLi');
